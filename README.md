@@ -9,6 +9,38 @@
 
 ---
 
+## 📍 Daftar Isi (Table of Contents)
+1.  [✨ Fitur Utama (Highlight)](#-fitur-utama-highlight)
+2.  [🛠️ Persyaratan & Instalasi](#️-persyaratan--instalasi)
+3.  [📜 Daftar Perintah Terlengkap](#-daftar-perintah-terlengkap-114-commands)
+    *   [🛡️ Moderation](#️-moderation-57-commands)
+    *   [⚙️ Administration & Automation](#️-administration--automation-15-commands)
+    *   [💰 Economy System](#-economy-system-15-commands)
+    *   [👥 Community & Social](#-community--social-8-commands)
+    *   [🛠️ Utility & General](#️-utility--general-16-commands)
+4.  [🛠️ Developer Guide](#️-developer-guide-extend-the-bot)
+5.  [🔑 Environment Variable Reference](#-environment-variable-reference)
+6.  [⚡ Performance & Scalability](#-performance--scalability)
+7.  [🏗️ Deep-Dive Architecture](#️-deep-dive-architecture)
+    *   [🗄️ Database Schema](#️-database-schema-sqlite)
+    *   [🔄 Event Flow Logic](#-event-flow-logic)
+8.  [📖 Detailed Feature Walkthroughs](#-detailed-feature-walkthroughs)
+    *   [⭐ Starboard](#-starboard-hall-of-fame)
+    *   [🎫 Advanced Ticket System](#-advanced-ticket-system)
+9.  [🎨 UI & Aesthetic Customization](#-ui--aesthetic-customization)
+10. [🔑 API Integration Guide](#-api-integration-guide-youtube--twitch)
+11. [🌐 Hosting & Deployment](#-hosting--deployment-recommendations)
+12. [📂 Detailed Module Documentation](#-detailed-module-documentation)
+13. [🔐 Permission Matrix](#-permission-matrix)
+14. [🚀 Future Roadmap](#-future-roadmap)
+15. [❓ FAQ](#-faq-frequently-asked-questions)
+16. [🛠️ Troubleshooting & Debugging](#️-troubleshooting--debugging)
+17. [🛡️ Security & Privacy](#️-security--privacy)
+18. [🤝 Kontribusi](#-kontribusi)
+19. [📄 Lisensi](#-lisensi)
+
+---
+
 ## ✨ Fitur Utama (Highlight)
 *   🛡️ **Moderasi Tanpa Batas**: 57+ perintah moderasi termasuk mass-action dan manajemen suara.
 *   💰 **Ekonomi MMORPG**: Sistem toko, inventory, hadiah, dan perjudian yang adil.
