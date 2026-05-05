@@ -229,6 +229,47 @@ Keamanan adalah prioritas kami:
 
 ---
 
+## 📂 Detailed Module Documentation
+
+### 🛠️ Core Utilities (`src/utils/`)
+*   **`announcerManager.js`**: Mesin polling otomatis yang mengirimkan pesan terjadwal dari database ke channel tujuan.
+*   **`birthdayManager.js`**: Pengelola database ulang tahun yang melakukan pengecekan harian dan mengirim ucapan otomatis.
+*   **`streamManager.js`**: Integrasi API eksternal (YouTube RSS, Twitch Helix) untuk notifikasi konten baru secara real-time.
+*   **`tempRoleManager.js`**: Sistem background worker yang memantau durasi role sementara dan mencabutnya secara otomatis.
+*   **`giveawayManager.js`**: Logika pengundian pemenang dan manajemen waktu giveaway yang persisten.
+*   **`reminderManager.js`**: Pengelola pengingat waktu pribadi member yang terintegrasi dengan database.
+
+### 🛡️ Middleware & Security
+*   **`interactionCreate.js`**: Otak dari seluruh interaksi bot (Slash commands, Buttons, Modals, Select Menus).
+*   **`messageCreate.js`**: Penanggung jawab Auto-Mod, Leveling XP, AFK Detection, dan Auto-Responder.
+
+---
+
+## 🔐 Permission Matrix
+Panduan izin yang direkomendasikan untuk stabilitas fitur:
+
+| Kategori | Izin Discord yang Dibutuhkan | Alasan |
+| :--- | :--- | :--- |
+| **Moderasi** | `Ban Members`, `Kick Members`, `Manage Messages` | Eksekusi hukuman & pembersihan chat. |
+| **Admin** | `Administrator` atau `Manage Guild` | Konfigurasi sistem inti server. |
+| **Cosmetic** | `Manage Roles`, `Manage Nicknames` | Mengubah warna & nama member. |
+| **Utility** | `Embed Links`, `Send Messages` | Pengiriman informasi & tiket. |
+
+---
+
+## 🌐 Hosting & Deployment Recommendations
+Untuk menjalankan bot ini 24/7 secara profesional, kami merekomendasikan:
+1.  **VPS (Virtual Private Server)**: DigitalOcean, Linode, atau Vultr (OS: Ubuntu 22.04 LTS).
+2.  **Process Manager**: Gunakan [PM2](https://pm2.keymetrics.io/) agar bot otomatis restart jika terjadi crash:
+    ```bash
+    npm install pm2 -g
+    pm2 start src/index.js --name "discord-bot"
+    pm2 save
+    ```
+3.  **Database Backup**: Lakukan backup file `database.sqlite` secara rutin setiap minggu.
+
+---
+
 ## 💖 Special Thanks
 Terima kasih kepada seluruh komunitas pengembang **Discord.js** dan para kontributor yang telah memberikan inspirasi dalam membangun bot All-in-One ini.
 
