@@ -257,6 +257,47 @@ Panduan izin yang direkomendasikan untuk stabilitas fitur:
 
 ---
 
+## 📖 Detailed Feature Walkthroughs
+
+### ⭐ Starboard (Hall of Fame)
+Sistem Starboard bekerja secara otomatis:
+1.  Member memberikan reaksi ⭐ pada pesan yang mereka sukai.
+2.  Setelah mencapai ambang batas (default: 3 ⭐), bot akan memposting pesan tersebut ke channel `#starboard`.
+3.  Jika jumlah bintang bertambah, bot akan memperbarui pesan yang sudah ada, bukan memposting ulang.
+
+### 🎫 Advanced Ticket System
+Sistem tiket kami mendukung privasi penuh:
+1.  Admin membuat pesan tiket menggunakan `/ticket setup`.
+2.  Member menekan tombol 📩 untuk membuka tiket.
+3.  Channel privat dibuat hanya untuk member tersebut dan Staff.
+4.  Setelah selesai, Staff bisa menggunakan `/ticket close` untuk menghapus channel dan menyimpan log percakapan.
+
+---
+
+## 🎨 UI & Aesthetic Customization
+Ingin mengubah tampilan bot agar sesuai dengan brand server Anda?
+*   **Warna Embed Utama**: Cari variabel warna (hex code seperti `#5865F2`) di file perintah terkait dan ubah sesuai keinginan.
+*   **Emoji Kustom**: Anda bisa mengganti emoji default (seperti 🔨, ⚙️) di file `src/commands/utility/help.js` atau file utilitas lainnya dengan ID emoji kustom server Anda sendiri.
+*   **Footer & Author**: Kustomisasi nama bot dan ikon di bagian `.setFooter()` dan `.setAuthor()` pada setiap file perintah.
+
+---
+
+## 🔑 API Integration Guide (YouTube & Twitch)
+
+### YouTube (RSS Method)
+Tidak memerlukan API Key! 
+1. Buka channel YouTube tujuan.
+2. Klik kanan -> View Page Source.
+3. Cari `channelId` (format: `UC...`).
+4. Gunakan ID tersebut di `/stream-setup youtube add`.
+
+### Twitch (API Method)
+1. Pergi ke [Twitch Dev Console](https://dev.twitch.tv/console).
+2. Buat aplikasi baru untuk mendapatkan `Client ID` dan `Client Secret`.
+3. Masukkan keduanya ke file `.env` Anda.
+
+---
+
 ## 🌐 Hosting & Deployment Recommendations
 Untuk menjalankan bot ini 24/7 secara profesional, kami merekomendasikan:
 1.  **VPS (Virtual Private Server)**: DigitalOcean, Linode, atau Vultr (OS: Ubuntu 22.04 LTS).
